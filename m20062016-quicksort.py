@@ -36,7 +36,15 @@ def isSorted(array):
 
 
 if __name__ == '__main__':
-    n = 20
+    if len(sys.argv) < 2:
+        print 'Usage: python m20062016-quicksort.py [N>=1]'
+        sys.exit(1)
+
+    n = int(sys.argv[1])
+    if n <= 1:
+       print 'Usage: python m20062016-quicksort.py [N>=1]'   
+       sys.exit(1)  
+    
     array =  [random.randint(-sys.maxint - 1, sys.maxint) for _ in xrange(n)]
     print 'Original array'
     print array
